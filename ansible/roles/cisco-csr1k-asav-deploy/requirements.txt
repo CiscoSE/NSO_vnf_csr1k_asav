@@ -1,0 +1,4 @@
+ncclient==0.5.3
+jinja2==2.9.6
+pyyaml==3.12
+shade==1.22.2

@@ -1,0 +1,85 @@
+# OpenStack info
+# add username and password for openstack
+openstack_credentials:
+  auth_url: "http://192.168.112.164:5000/v3"
+  username: 
+  password: 
+  project_name: admin
+
+#CSR1K attributes in openstack
+flavor:
+  name: CSR_vnfd_image_spak
+  ram: 4096
+  disk: 0
+  vcpus: 1
+
+#ASAv attributes in openstack
+asav_flavor:
+  name: asav941
+  ram: 2024
+  disk: 0
+  vcpus: 1
+
+# nso info
+nso:
+  # NSO name or api
+  api: 192.168.112.95
+  # NSO User. TODO: This should be in a secret file
+  username: 
+  # NSO Password. TODO: This should be in a secret file
+  password: 
+
+
+# service instance info
+instance:
+ 
+  # ESC device name in NSO
+  esc_device: esc0
+  # Openstack Tenant
+  tenant: admin
+
+
+  # Deployment name of CSR1K
+  name: csr1k
+  # Management network, recommended to be accesible to ESC
+  mgmt_net: mgmt_spak
+  mgmt_ip: 10.10.100.100
+
+  # Left or outside network to plug the second csr interface
+  outside_net: vlan210
+  # Left or outside network ip that the csr will use
+  outside_ip: 192.168.210.100
+
+  # Right or inside network to plug the third csr interface
+  inside_net: inside_spak
+  # Right or inside network ip that the csr will use
+  inside_ip: 192.168.100.100
+
+  day_0_url: http://192.168.112.95/vnf/cisco-csr1k-day0-hc.txt
+
+  image_name: CSR_vnfd_image_spak
+
+  # Deployment name of ASAv
+  asav_name: asav
+
+  # Management IP, recommended to be accessible to ESC
+  asav_mgmt_ip: 10.10.100.110
+
+  # Left or outside network to plug the second asav interface
+  asav_outside_net: vlan220
+  # Left or outside network ip that the asav will use
+  asav_outside_ip: 172.16.220.110
+
+  # Right or inside network to plug the third asav interface
+  asav_inside_net: inside_spak
+  # Right or inside network ip that the ASAv will use
+  asav_inside_ip: 192.168.100.110
+
+
+  asav_day_0_url: http://192.168.112.95/vnf/cisco-asav-day0.txt
+
+  asav_image_name: asav941
+
+  # Password for the admin user in the ASAv
+  admin_password: cisco
+

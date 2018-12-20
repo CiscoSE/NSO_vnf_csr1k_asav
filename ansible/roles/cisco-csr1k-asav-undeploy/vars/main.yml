@@ -1,0 +1,23 @@
+# nso info
+nso:
+  # NSO name or api
+  api: 192.168.112.95
+  # NSO User. TODO: This should be in a secret file
+  username: 
+  # NSO Password. TODO: This should be in a secret file
+  password: 
+
+
+# service instance info
+instance:
+
+  # ESC device name in
+  esc_device: esc0
+  # Openstack Tenant
+  tenant: admin
+
+  # Deployment name for CSR1K
+  name: csr1k
+
+  # Deployment name for ASAv
+  asav_name: asav

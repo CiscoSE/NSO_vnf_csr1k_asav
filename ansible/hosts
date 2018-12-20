@@ -1,0 +1,17 @@
+#localhost    ansible_connection=local
+
+# if using Ansible with python virtualenv, use localhost option below
+# with change to your python executable path location
+localhost    ansible_connection=local ansible_python_interpreter=
+
+#add ip for ansible_host eg. 1.1.1.1
+nso          ansible_host=
+
+
+### cisco-csr1k-asav-deploy.yaml hosts ###
+
+# Replace for your vim mgmt node with ip eg. 1.1.1.1
+[cisco-vim-mgmt-node]
+
+
+
